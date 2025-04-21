@@ -1,0 +1,53 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background-color: #222;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    padding: 15px 20px;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #222;
+    z-index: 1100;
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 900;
+  }
+  

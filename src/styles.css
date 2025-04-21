@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #20232a;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.profile button {
+  padding: 5px 15px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.main-content {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.content-area {
+  flex: 1;
+  padding: 20px;
+}
+
+.video-section {
+  display: flex;
+}
+
+.video-list {
+  width: 70%;
+}
+
+.video-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.video-item:hover {
+  background-color: #f0f0f0;
+}
+
+.video-player {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.video-player iframe {
+  width: 100%;
+}
+
+.upload, .filter, .quiz {
+  margin-top: 20px;
+}
+
+.upload input, .filter select {
+  margin: 5px 0;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
