@@ -4,7 +4,7 @@ import "./Header.css";
 function Header() {
   return (
     <header className="header">
-      <div className="logo">🎓 EduTube</div>
+      <div className="logo">🎓 NouvaLab</div>
       <nav className="nav">
         <input type="text" placeholder="Search..." className="search-box" />
         <button className="search-button">Search</button>

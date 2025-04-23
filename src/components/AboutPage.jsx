@@ -5,9 +5,9 @@ function AboutPage() {
   return (
     <PageWrapper>
     <div className="about-page">
-      <h1>About EduVision</h1>
+      <h1>About NouvaLab</h1>
       <p className="intro">
-        EduVision is a student-first educational platform built to deliver
+        NouvaLab is a student-first educational platform built to deliver
         high-quality, short-form academic videos to learners across the globe.
         We’re committed to making learning fun, accessible, and engaging —
         anywhere, anytime.

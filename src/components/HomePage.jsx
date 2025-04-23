@@ -9,13 +9,13 @@ function HomePage() {
     <PageWrapper>
     <div className="home-page">
       <section className="hero">
-        <h1>Welcome to EduTube</h1>
+        <h1>Welcome to NouvaLab</h1>
         <p>Your hub for educational videos, quizzes, and progress tracking.</p>
       </section>
 
       <section className="about">
         <h2>About Us</h2>
-        <p>EduTube provides easy access to learning through short, powerful videos.</p>
+        <p>NouvaLab provides easy access to learning through short, powerful videos.</p>
       </section>
     </div>
     </PageWrapper>

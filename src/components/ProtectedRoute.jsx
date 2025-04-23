@@ -6,7 +6,7 @@ import { useAuth } from "../firebase/useAuth";
 const ProtectedRoute = ({ children }) => {
   const { currentUser, loading } = useAuth();
 
-  if (loading) return <p>Loading...</p>; // 👈 wait for auth to finish checking
+  if (loading) return <p>Loading...</p>; 
   if (!currentUser) return <Navigate to="/login" />;
   
   return children;

@@ -5,7 +5,7 @@ function Testimonials() {
   const reviews = [
     {
       name: "Lebo M.",
-      text: "EduTube helped me understand algebra like never before! The videos are super engaging.",
+      text: "NouvaLab helped me understand algebra like never before! The videos are super engaging.",
       image:
         "https://randomuser.me/api/portraits/women/44.jpg",
     },
@@ -17,7 +17,7 @@ function Testimonials() {
     },
     {
       name: "Nandi K.",
-      text: "Thanks to EduTube, I passed my exams with flying colors!",
+      text: "Thanks to NouvaLab, I passed my exams with flying colors!",
       image:
         "https://randomuser.me/api/portraits/women/65.jpg",
     },

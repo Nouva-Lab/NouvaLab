@@ -28,7 +28,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} EduVision. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} NouvaLab. All rights reserved.</p>
       </div>
     </footer>
   );
