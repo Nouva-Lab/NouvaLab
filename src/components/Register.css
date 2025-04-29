@@ -1,53 +1,59 @@
-/* General Styles */
+/* Container */
 .register-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    background-color: #fefefe;
-    border-radius: 10px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 60px auto;
+  @apply flex flex-col items-center justify-center p-10 bg-gray-100 rounded-lg shadow-md max-w-md mx-auto mt-16 transition-shadow duration-300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.register-form:hover {
+  @apply shadow-lg;
+}
+
+/* Heading */
+.register-heading {
+  @apply text-3xl text-dark-blue mb-8 font-semibold text-center;
+}
+
+/* Inputs */
+.input-field {
+  @apply w-full px-4 py-3 mb-5 rounded-lg border-2 border-light-blue text-base transition-colors duration-300 bg-white text-gray-800;
+}
+
+.input-field:focus {
+  @apply border-secondary-blue outline-none shadow-outline;
+}
+
+/* Button */
+.register-button {
+  @apply bg-red text-white border-none px-5 py-3 rounded-lg text-lg cursor-pointer transition-colors duration-300;
+}
+
+.register-button:hover {
+  @apply bg-red-dark;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .register-form {
+    @apply p-8 mt-12;
   }
-  
-  .register-form h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 25px;
-  }
-  
-  /* Inputs */
-  .register-form input {
-    width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    transition: border 0.3s;
-    background-color: #fff;
-  }
-  
-  .register-form input:focus {
-    border-color: #ff4d4d;
-    outline: none;
-  }
-  
-  /* Button */
-  .register-form button {
-    background-color: #ff4d4d;
-    color: #fff;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .register-form button:hover {
-    background-color: #e60000;
-  }
-  
+}
+
+/* Colors */
+.text-dark-blue {
+  color: #1d3557;
+}
+.border-light-blue {
+  border-color: #a8dadc;
+}
+.border-secondary-blue {
+  border-color: #457b9d;
+}
+.bg-gray-100 {
+  background-color: #f1faee;
+}
+.bg-red {
+  background-color: #e63946;
+}
+.bg-red-dark {
+    background-color: #d62936;
+}

@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import App from "./App";
 import HomePage from "./components/HomePage";
@@ -11,6 +10,7 @@ import UploadVideo from "./components/UploadVideo";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
+import React from 'react';
 
 const RoutesSetup = () => {
   return (

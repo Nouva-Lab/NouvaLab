@@ -1,29 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Sidebar.css";
+import React, { useState } from 'react';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/firebase";
+import { useNavigate } from "react-router-dom";
+import './Register.css'; 
 
-function Sidebar({ isOpen, toggleSidebar }) {
+const Register = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      navigate("/videos"); // ✅ redirect after signup
+    } catch (error) {
+      alert("Registration failed: " + error.message);
+    }
+  };
+
   return (
-    <>
-      <div className={`sidebar ${isOpen ? "open" : ""}`}>
-        <ul className="menu">
-          <li><Link to="/" onClick={toggleSidebar}>🏠 Home</Link></li>
-          <li><Link to="/subjects" onClick={toggleSidebar}>📚 Subjects</Link></li>
-          <li><Link to="/quiz" onClick={toggleSidebar}>📝 Quizzes</Link></li>
-          <li><Link to="/videos" onClick={toggleSidebar}>🎥 My Videos</Link></li>
-          <li><Link to="/progress" onClick={toggleSidebar}>📈 Progress</Link></li>
-          <li><Link to="/notifications" onClick={toggleSidebar}>📨 Notifications</Link></li>
-          <li><Link to="/contact" onClick={toggleSidebar}>❓ Support</Link></li>
-          <li><Link to="/about" onClick={toggleSidebar}>ℹ️ About</Link></li>
-        </ul>
-      </div>
-
-      {/* Overlay */}
-      {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
-    </>
+    <form onSubmit={handleRegister}>
+      <h2>Register</h2>
+      <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+      <input value={password} type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+      <button type="submit">Register</button>
+    </form>
   );
-}
+};
 
-export default Sidebar;
-
-
+export default Register;

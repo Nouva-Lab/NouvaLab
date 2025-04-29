@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import PageWrapper from "./PageWrapper";
 import "./AboutPage.css";
 
 function AboutPage() {

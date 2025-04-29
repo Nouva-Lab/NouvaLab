@@ -1,66 +1,81 @@
 .quiz-section {
-    padding: 40px 20px;
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
+  @apply p-10 mx-auto text-center transition-all duration-300 rounded-2xl shadow-lg max-w-4xl;
+  background-color: #f1faee; /* Off-white */
+}
+
+.quiz-title {
+  @apply text-5xl text-[#1d3557] mb-8 font-bold uppercase;
+}
+
+@media (max-width: 640px) {
+  .quiz-title {
+    @apply text-4xl;
   }
-  
-  .quiz-section h2 {
-    font-size: 2rem;
-    color: #e63946;
-    margin-bottom: 30px;
+}
+
+.question-card {
+  @apply bg-white p-8 rounded-2xl shadow-xl transition-shadow duration-300 mb-5;
+}
+
+.question-card:hover {
+  @apply shadow-2xl;
+}
+
+.question-text {
+  @apply text-2xl mb-6 text-[#333] font-semibold;
+}
+
+@media (max-width: 640px) {
+  .question-text {
+    @apply text-xl;
   }
-  
-  .question-card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-  }
-  
-  .question-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 25px;
-    text-align: left;
-  }
-  
-  .option {
-    font-size: 1rem;
-    color: #444;
-  }
-  
-  .option input {
-    margin-right: 10px;
-  }
-  
-  button {
-    background-color: #e63946;
-    color: white;
-    padding: 10px 25px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
+}
+
+.options {
+  @apply flex flex-col gap-3 mb-8 text-left;
+}
+
+.option {
+  @apply text-lg text-[#444] flex items-center transition-colors duration-300 p-2 rounded-lg;
+}
+
+.option:hover {
+  @apply bg-[#a8dadc];
+}
+
+.option input {
+  @apply mr-4 cursor-pointer;
+}
+
+.quiz-section button {
+  @apply bg-[#e63946] text-white py-4 px-8 text-lg border-none rounded-lg cursor-pointer transition-all duration-300 shadow-md;
+}
+
+.quiz-section button:hover {
+  @apply bg-[#d02731] -translate-y-0.5;
+}
+
+.quiz-section button:disabled {
+  @apply bg-[#ccc] cursor-not-allowed;
+}
+
+.score-display {
+  @apply text-3xl text-[#1d3557] bg-[#a8dadc] p-6 rounded-2xl mt-5 shadow-lg;
+}
+
+@media (max-width: 640px) {
   .score-display {
-    font-size: 1.5rem;
-    color: #444;
-    background: #f1f1f1;
-    padding: 20px;
-    border-radius: 10px;
+    @apply text-2xl;
   }
-  
+}
+
+
+
+
+
+
+
+
+
+
+

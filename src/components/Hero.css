@@ -1,43 +1,71 @@
+/* Hero Section Styles */
 .hero {
-    background-image: url("https://images.unsplash.com/photo-1581091215367-4c6d6595702b");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 80px 30px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 30px;
+  background-image: url("https://images.unsplash.com/photo-1581091215367-4c6d6595702b"); /* Background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  color: #dbe2ef; /* Light gray/off-white text */
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 20px; /* Padding for smaller screens */
+  margin-bottom: 30px; /* Margin at the bottom */
+  text-align: center; /* Center align text */
+  position: relative; /* For positioning pseudo-element */
+  overflow: hidden; /* Hide overflow */
+  border-bottom: 1px solid #3f72af; /* Border at the bottom */
+  transition: all 0.3s ease; /* Transition for smooth effects */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 60px 30px; /* More padding for larger screens */
+    margin-bottom: 40px; /* More margin for larger screens */
+    border-bottom: 2px solid #3f72af; /* Thicker border for larger screens */
   }
-  
+}
+
+.hero-content {
+  background-color: rgba(35, 61, 77, 0.7); /* Dark teal/blue with opacity */ /* Semi-transparent background */
+  color: #dbe2ef; /* Light gray/off-white text */
+  padding: 30px 20px; /* Padding for smaller screens */
+  border-radius: 12px; /* Rounded corners */
+  max-width: 1000px; /* Maximum width */
+  margin: 0 auto; /* Center horizontally */
+  width: 90%; /* Take up full width */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease; /* Transition for smooth effects */
+  border: 1px solid #3f72af; /* Add border */
+}
+
+@media (min-width: 768px) {
   .hero-content {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 40px 20px;
-    border-radius: 10px;
+    padding: 50px; /* More padding for larger screens */
+    width: 80%; /* Take less width in larger screens */
   }
-  
-  .hero h1 {
-    font-size: 2.8rem;
+}
+
+.hero-title {
+  font-size: 2.2rem; /* Smaller font size for smaller screens */
+  font-weight: 800; /* Bold font */
+  margin-bottom: 15px; /* Margin below the title */
+  line-height: 1.2; /* Adjust line height */
+}
+
+.hero-subtitle {
+  font-size: 1rem; /* Smaller font size for smaller screens */
+  line-height: 1.6; /* Adjust line height */
+  margin-bottom: 25px; /* Margin below the subtitle */
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
     margin-bottom: 20px;
   }
-  
-  .hero p {
+
+  .hero-subtitle {
     font-size: 1.2rem;
-    margin-bottom: 25px;
+    margin-bottom: 35px; /* More margin for larger screens */
   }
-  
-  .hero-btn {
-    background-color: #e63946;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.3s;
-  }
-  
-  .hero-btn:hover {
-    background-color: #c82333;
-  }
-  
+}

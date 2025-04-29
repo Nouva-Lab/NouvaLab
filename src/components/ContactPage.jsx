@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import "./ContactPage.css";
+import PageWrapper from "./PageWrapper";
 
 function ContactPage() {
   const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ function ContactPage() {
     <PageWrapper>
     <div className="contact-page">
       <h1>Contact Us</h1>
-      <p>We’d love to hear from you! Reach out with questions, feedback, or support needs.</p>
+      <h1>Contact NouvaLab Education</h1>
       {!submitted ? (
         <form onSubmit={handleSubmit} className="contact-form">
           <input

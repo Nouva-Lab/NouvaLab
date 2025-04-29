@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react'
+
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
@@ -12,6 +13,8 @@ import QuizSection from "./components/QuizSection";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Subjects from "./components/Subjects";
+import SubjectPage from "./components/SubjectPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -23,6 +26,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="subjects" element={<Subjects />} />
+          <Route path="subjects/:subjectName" element={<SubjectPage />} />
 
           {/* Protected Routes */}
           <Route

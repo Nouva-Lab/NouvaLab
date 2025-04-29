@@ -1,46 +1,65 @@
+/* Header Styles */
 .header {
-    background-color: #ffffff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  @apply bg-[#233d4d] px-10 py-5 flex justify-between items-center sticky top-0 z-10 font-sans;
+}
+
+/* Logo Styles */
+.logo {
+  @apply text-xl font-bold text-[#dbe2ef] tracking-tight;
+}
+
+/* Navigation Styles */
+.nav {
+  @apply flex items-center gap-8;
+}
+
+/* Search Container Styles */
+.search-container {
+  @apply flex items-center bg-[#dbe2ef] rounded-full p-1;
+}
+
+/* Search Box Styles */
+.search-box {
+  @apply p-2 border-none rounded-full outline-none w-52 font-sans text-sm;
+}
+
+/* Search Button Styles */
+.search-button {
+  @apply px-4 py-2 bg-[#e63946] border-none text-[#dbe2ef] rounded-full cursor-pointer font-sans font-bold;
+}
+
+/* Navigation Links Styles */
+.nav-links {
+  @apply flex items-center gap-6;
+}
+
+.nav-links a {
+  @apply text-[#dbe2ef] font-semibold no-underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    @apply px-5;
   }
-  
+
   .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e63946;
+    @apply text-lg;
   }
-  
+
   .nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    @apply gap-4;
   }
-  
+
   .search-box {
-    padding: 6px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+    @apply w-40;
   }
-  
+
   .search-button {
-    padding: 6px 12px;
-    background-color: #e63946;
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+    @apply px-3 py-1 text-sm;
   }
-  
-  .nav-links a {
-    margin-left: 15px;
-    color: #333;
-    font-weight: 500;
+
+  .nav-links {
+    @apply gap-3;
   }
-  
+}

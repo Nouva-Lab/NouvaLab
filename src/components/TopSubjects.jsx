@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import "./TopSubjects.css";
 
 function TopSubjects() {
@@ -14,18 +15,15 @@ function TopSubjects() {
   ];
 
   return (
-    <section className="top-subjects">
-      <h2>Top Subjects</h2>
-      <div className="subjects-grid">
-        {subjects.map((subject, index) => (
-          <div key={index} className="subject-card">
-            <h3>{subject}</h3>
-            <p>Explore lessons and videos on {subject}.</p>
-            <a href="#" className="subject-btn">Start Learning</a>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="subjects-grid">
+      {subjects.map((subject, index) => (
+        <div key={index} className="subject-card">
+          <h3>{subject}</h3>
+          <p>Explore lessons and videos on {subject}.</p>
+          <Link to={`/subjects/${subject.toLowerCase()}`} className="subject-btn">Start Learning</Link>
+        </div>
+      ))}
+    </div>
   );
 }
 

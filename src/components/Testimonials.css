@@ -1,47 +1,56 @@
-.testimonials {
-    padding: 50px 20px;
-    background-color: #fafafa;
-    text-align: center;
-  }
-  
-  .testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #333;
-  }
-  
-  .testimonial-cards {
+.testimonials-section {
+  @apply bg-[#233d4d] text-[#dbe2ef] py-16 px-4 text-center border-b border-[#3f72af] transition duration-300;
+}
+
+.testimonials-title {
+  @apply text-4xl font-bold mb-10 transition duration-300;
+}
+
+.testimonials-container {
+  @apply flex flex-wrap gap-8 justify-center transition duration-300;
+}
+
+.testimonial-card {
+  @apply bg-[#dbe2ef] p-6 w-72 rounded-lg shadow-md text-center text-[#233d4d] border border-[#3f72af] transition duration-300;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-image-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.testimonial-image {
+  @apply w-24 h-24 rounded-full object-cover transition duration-300 border-2 border-[#3f72af];
+}
+
+.testimonial-name {
+  @apply mt-3 mb-2 text-lg font-semibold text-[#e63946] transition duration-300;
+}
+
+.testimonial-text {
+  @apply text-sm leading-relaxed transition duration-300;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .testimonials-section {
+    @apply px-8;
   }
-  
-  .testimonial-card {
-    background-color: #fff;
-    padding: 20px;
-    width: 250px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .testimonials-section {
+    @apply px-16;
   }
-  
-  .testimonial-card img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  .testimonial-card h3 {
-    margin: 10px 0 5px;
-    font-size: 1.2rem;
-    color: #e63946;
-  }
-  
-  .testimonial-card p {
-    font-size: 0.95rem;
-    color: #555;
-  }
-  
+}
+
+.testimonial-card {
+  text-align: center;
+}

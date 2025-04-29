@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import "./ProfilePage.css";
 import PageWrapper from "./PageWrapper";
 

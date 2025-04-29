@@ -1,5 +1,5 @@
 {
-  "name": "edutube",
+  "name": "NouvaLab-Education",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
-    "firebase": "^10.14.1",
+    "firebase": "^11.6.1",
     "framer-motion": "^12.7.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

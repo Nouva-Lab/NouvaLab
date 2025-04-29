@@ -1,0 +1,50 @@
+/* General container for the subject page */
+.subject-page {
+    @apply min-h-screen bg-[#233d4d] text-[#dbe2ef] py-12;
+  }
+  
+  /* Title of the subjects section */
+  .subject-title {
+    @apply text-center text-4xl font-bold text-[#dbe2ef] mb-10;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* List of subjects */
+  .subject-list {
+    @apply grid gap-6 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  /* Card containing the subject */
+  .subject-card {
+    @apply flex flex-col justify-between bg-[#3f72af] p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-[#3f72af];
+  }
+  
+  /* When hovering over the card */
+  .subject-card:hover {
+    @apply bg-[#233d4d] scale-105;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Subject card title */
+  .subject-card-title {
+    @apply text-xl font-bold mb-4;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Subject card description */
+  .subject-card-desc {
+    @apply text-base leading-relaxed mb-4;
+  }
+  
+  /* Subject card link */
+  .subject-link {
+    @apply block bg-[#e63946] text-center text-white font-medium py-3 px-6 rounded-md hover:bg-[#c82333] transition-colors duration-300;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .subject-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    

@@ -1,75 +1,74 @@
+/* Profile Page */
 .profile-page {
-    padding: 30px 20px;
-  }
-  
-  .profile-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 40px;
-  }
-  
-  .profile-header img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .profile-info h2 {
-    font-size: 1.8rem;
-    margin: 0;
-    color: #e63946;
-  }
-  
-  .profile-info p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .saved-videos h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #222;
-  }
-  
+  @apply bg-[#233d4d] text-[#dbe2ef] flex flex-col items-center min-h-screen p-5;
+}
+
+/* Profile Header */
+.profile-header {
+  @apply flex items-center gap-5 mb-8 w-full max-w-4xl bg-transparent p-2 rounded-md;
+}
+
+.profile-header img {
+  @apply w-20 h-20 rounded-full object-cover border-4 border-[#3f72af];
+}
+
+/* Profile Info */
+.profile-info {
+  @apply flex flex-col;
+}
+
+.profile-name {
+  @apply text-2xl font-semibold mb-1;
+}
+
+.profile-email {
+  @apply text-lg;
+}
+
+/* Saved Videos */
+.saved-videos {
+  @apply w-full max-w-4xl;
+}
+
+.saved-videos-title {
+  @apply text-2xl font-semibold mb-5;
+}
+
+/* Saved Grid */
+.saved-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full;
+}
+
+/* Saved Card */
+.saved-card {
+  @apply bg-[#3f72af] rounded-xl;
+}
+
+/* Saved Details */
+.saved-details {
+  @apply p-3;
+}
+
+/* Saved Video Title */
+.saved-video-title {
+  @apply text-lg font-medium;
+}
+
+/* Responsive Design */
+
+@media (min-width: 640px) {
   .saved-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 20px;
+    @apply grid-cols-2;
   }
-  
-  .saved-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .saved-grid {
+    @apply grid-cols-3;
   }
-  
-  .saved-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .saved-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-  }
-  
-  .saved-details {
-    padding: 10px;
-  }
-  
-  .saved-details h4 {
-    font-size: 1rem;
-    color: #e63946;
-    margin-bottom: 5px;
-  }
-  
-  .saved-details p {
-    font-size: 0.85rem;
-    color: #555;
-  }
-  
+}
+
+.saved-details h4 {
+  font-size: 1.2rem;
+  color: #dbe2ef;
+}

@@ -1,4 +1,6 @@
 
+const module = { exports: {} };
+const exports = module.exports
 const connectorConfig = {
   connector: 'default',
   service: 'edutube-my-feature-branch',

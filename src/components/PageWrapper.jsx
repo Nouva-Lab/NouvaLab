@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";  // Added missing import
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const pageVariants = {
   initial: { opacity: 0, y: 50 },

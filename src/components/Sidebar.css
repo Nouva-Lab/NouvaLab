@@ -1,53 +1,51 @@
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 220px;
-    height: 100%;
-    background-color: #222;
-    color: white;
-    transition: left 0.3s ease;
-    z-index: 1000;
-    padding-top: 60px;
+.footer {
+  @apply bg-[#233d4d] text-[#dbe2ef] p-8 mt-16 flex flex-col items-center justify-center font-sans relative;
+}
+
+.footer-links {
+  @apply flex flex-wrap justify-center gap-8 max-w-6xl w-full px-5 mb-8;
+}
+
+.footer-column {
+  @apply flex-1 min-w-[150px];
+}
+
+.footer-column-title {
+  @apply text-base font-bold text-[#dbe2ef] mb-2;
+}
+
+.footer-link {
+  @apply block text-[#dbe2ef] mb-1 no-underline;
+}
+
+.footer-bottom {
+  @apply text-center mt-5 border-t border-[#dbe2ef]/30 pt-4 text-sm text-[#dbe2ef];
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer {
+    @apply px-4; /* Adjust padding */
   }
-  
-  .sidebar.open {
-    left: 0;
+
+  .footer-links {
+    @apply gap-6;
   }
-  
-  .menu {
-    list-style: none;
-    padding: 0;
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    @apply flex-col items-center; /* Stack items vertically */
   }
-  
-  .menu li {
-    padding: 15px 20px;
+
+  .footer-column {
+    @apply text-center; /* Center align text */
   }
-  
-  .menu li a {
-    color: white;
-    text-decoration: none;
+
+  .footer-column-title {
+    @apply mt-2; /* Add some spacing */
   }
-  
-  .menu-toggle {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: #222;
-    z-index: 1100;
-    cursor: pointer;
+
+  .footer-link {
+    @apply mb-2; /* Add some spacing */
   }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 900;
-  }
-  
