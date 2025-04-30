@@ -1,11 +1,11 @@
 .quiz-section {
-  @apply p-10 mx-auto text-center transition-all duration-300 rounded-2xl shadow-lg max-w-4xl;
-  background-color: #f1faee; /* Off-white */
+  @apply p-10 mx-auto text-center transition-all duration-300 rounded-2xl shadow-lg max-w-4xl bg-lightGray;
 }
 
 .quiz-title {
-  @apply text-5xl text-[#1d3557] mb-8 font-bold uppercase;
+  @apply text-5xl text-darkBlue mb-8 font-bold uppercase;
 }
+
 
 @media (max-width: 640px) {
   .quiz-title {
@@ -13,7 +13,7 @@
   }
 }
 
-.question-card {
+.question-card { 
   @apply bg-white p-8 rounded-2xl shadow-xl transition-shadow duration-300 mb-5;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .question-text {
-  @apply text-2xl mb-6 text-[#333] font-semibold;
+  @apply text-2xl mb-6 text-darkBlue font-semibold;
 }
 
 @media (max-width: 640px) {
@@ -35,18 +35,18 @@
   @apply flex flex-col gap-3 mb-8 text-left;
 }
 
-.option {
-  @apply text-lg text-[#444] flex items-center transition-colors duration-300 p-2 rounded-lg;
+.option { 
+  @apply text-lg text-darkBlue flex items-center transition-colors duration-300 p-2 rounded-lg;
 }
 
 .option:hover {
-  @apply bg-[#a8dadc];
+  @apply bg-lightBlue;
 }
 
 .option input {
   @apply mr-4 cursor-pointer;
 }
-
+/* Buttons */
 .quiz-section button {
   @apply bg-[#e63946] text-white py-4 px-8 text-lg border-none rounded-lg cursor-pointer transition-all duration-300 shadow-md;
 }
@@ -57,21 +57,16 @@
 
 .quiz-section button:disabled {
   @apply bg-[#ccc] cursor-not-allowed;
-}
+} 
 
 .score-display {
-  @apply text-3xl text-[#1d3557] bg-[#a8dadc] p-6 rounded-2xl mt-5 shadow-lg;
+  @apply text-3xl text-darkBlue bg-lightBlue p-6 rounded-2xl mt-5 shadow-lg;
 }
-
 @media (max-width: 640px) {
   .score-display {
     @apply text-2xl;
   }
 }
-
-
-
-
 
 
 

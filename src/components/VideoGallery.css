@@ -1,51 +1,28 @@
-.video-gallery {
-    padding: 40px 20px;
-  }
-  
-  .video-gallery h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #222;
-  }
-  
-  .video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
-  }
-  
-  .video-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-    cursor: pointer;
-  }
-  
-  .video-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .video-card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-  }
-  
-  .video-info {
-    padding: 15px;
-  }
-  
-  .video-info h3 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: #e63946;
-  }
-  
-  .video-info p {
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
+.video-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f4; /* Light gray background */
+  border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.video-gallery-container .video-player-container {
+  width: 100%;
+  background-color: #fff; /* White background for each video */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content within the container respects the rounded corners */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.video-gallery-container .video-player-container:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+

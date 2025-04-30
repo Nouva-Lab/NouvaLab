@@ -1,81 +1,88 @@
-import React, { useState, Component } from 'react';
-import { Outlet, Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Welcome from './components/Welcome';
+import SubjectsSection from './components/SubjectsSection';
+import TeacherSection from './components/TeacherSection';
+
+import ContactPage from "./components/ContactPage";
+import VideoGallery from "./components/VideoGallery";
+import Login from "./components/Login";
+import ProfilePage from "./components/ProfilePage";
+import UploadVideo from './components/UploadVideo';
+import SubjectPage from "./components/SubjectPage";
+import AboutPage from "./components/AboutPage";
+import HomePage from "./components/HomePage";
+import Subjects from "./components/Subjects";
+import QuizSection from "./components/QuizSection";
 import PageWrapper from "./components/PageWrapper";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "./App.css";
-import "./components/Sidebar.css"; // Assuming you have a CSS file for sidebar styles
 import "./components/ProfilePage.css"; // Assuming you have a CSS file for profile page styles
 import "./components/HomePage.css"; // Assuming you have a CSS file for home page styles
 import "./components/Subjects.css";
 import "./components/VideoList.css"; // Assuming you have a CSS file for video list styles
 import "./components/QuizSection.css"; // Assuming you have a CSS file for quiz section styles
 import "./components/UploadVideo.css"; // Assuming you have a CSS file for upload video styles
-import "./components/Login.css"; // Assuming you have a CSS file for login styles
-import "./components/Register.css"; // Assuming you have a CSS file for register styles
+import './components/Login.css'; // Assuming you have a CSS file for login styles
 import "./components/ContactPage.css"; // Assuming you have a CSS file for contact page styles
 import "./components/AboutPage.css"; // Assuming you have a CSS file for about page styles
+import './App.css';
+import './components/Footer.css';
+import Register from './components/Register';
 
+function ErrorBoundary({ children }) {
+  const [hasError, setHasError] = useState(false);
+  
+  useEffect(() => {
+    const errorHandler = (error) => {
+      setHasError(true);
+      console.error("ErrorBoundary caught an error:", error);
+    };
 
-class ErrorBoundary extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+    window.addEventListener("error", errorHandler);
+
+    return () => {
+      window.removeEventListener("error", errorHandler);
+    };
+  }, []);
+
+  if (hasError) {
+    return <h1>Something went wrong.</h1>;
   }
 
-  static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    // You can log the error to an error reporting service here
-    console.error("Uncaught error:", error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>;
-    }
-
-    return this.props.children;
-  }
+  return children;
 }
 
 function App() {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-    const toggleSidebar = () => {
-        setSidebarOpen(!sidebarOpen);
-    }
-    const closeSidebar = () => setSidebarOpen(false);
+  return (
+    <ErrorBoundary>
 
-    return (
-        <ErrorBoundary>
-            <PageWrapper>
-                <div className={`app ${sidebarOpen ? "sidebar-open" : ""}`}>
-                    <Header toggleSidebar={toggleSidebar}/>
-                    {sidebarOpen && <div className="overlay" onClick={closeSidebar}></div>}
-                    <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
-                        <ul className="sidebar-links">
-                            <li><Link to="/" onClick={closeSidebar}>Home</Link></li>
-                            <li><Link to="/about" onClick={closeSidebar}>About</Link></li>
-                            <li><Link to="/contact" onClick={closeSidebar}>Contact</Link></li>
-                            <li><Link to="/videos" onClick={closeSidebar}>Videos</Link></li>
-                            <li><Link to="/subjects" onClick={closeSidebar}>Subjects</Link></li>
-                            <li><Link to="/quiz" onClick={closeSidebar}>Quiz</Link></li>
-                            <li><Link to="/upload" onClick={closeSidebar}>Upload</Link></li>
-                            <li><Link to="/profile" onClick={closeSidebar}>Profile</Link></li>
-                            <li><Link to="/login" onClick={closeSidebar}>Login</Link></li>
-                            <li><Link to="/register" onClick={closeSidebar}>Register</Link></li>
-                        </ul>
-                    </div>
-                    <main className="main-content"><Outlet /></main>
-                    <Footer />
-                </div>
-            </PageWrapper>
-        </ErrorBoundary>
-    );
+      <PageWrapper>
+        <div className="app">
+          <Header />
+          <Welcome />
+          <SubjectsSection />
+          <TeacherSection />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/videos" element={<VideoGallery />} />
+              <Route path="/subjects" element={<Subjects />} />
+              <Route path="/subjects/:id" element={<SubjectPage />} />
+              <Route path="/quiz" element={<QuizSection />} />
+              <Route path="/upload" element={<UploadVideo />} />
+              <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </PageWrapper>
+    </ErrorBoundary>
+  );
 }
 
 export default App;

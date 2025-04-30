@@ -1,5 +1,5 @@
 /* General styles for the video list */
-.video-list {
+.video-list{
   @apply p-6 flex flex-col gap-6;
   font-family: 'Roboto', sans-serif;
   background-color: #233d4d; /* Dark teal/blue */
@@ -33,16 +33,12 @@
 
 /* Responsive styles */
 @media (min-width: 600px) {
-  .video-list {
-    @apply flex-row flex-wrap justify-center p-8 gap-8;
-  }
-
   .video-card {
     @apply w-[calc(50%-28px)] m-0;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 900px) {.video-list{ @apply grid grid-cols-3; }
   .video-card {
     @apply w-[calc(33.33%-32px)];
   }

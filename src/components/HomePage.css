@@ -1,33 +1,35 @@
 .testimonials-section {
-  @apply bg-[#233d4d] text-[#dbe2ef] py-16 px-4 text-center border-b border-[#3f72af] transition duration-300;
+  background-color: var(--light-gray);
+  color: var(--dark-blue);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
 .testimonials-title {
-  @apply text-4xl font-bold mb-10 transition duration-300;
-}
-
-.testimonials-container {
-  @apply flex flex-wrap gap-8 justify-center transition duration-300;
+  padding: 1rem;
+  color: var(--dark-blue);
 }
 
 .testimonial-card {
-  @apply bg-[#dbe2ef] p-6 w-72 rounded-lg shadow-md text-center text-[#233d4d] border border-[#3f72af] transition duration-300;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .testimonial-card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.testimonial-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-}
 
 .testimonial-image {
-  @apply w-24 h-24 rounded-full object-cover transition duration-300 border-2 border-[#3f72af];
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .testimonial-name {
@@ -38,38 +40,13 @@
   @apply text-sm leading-relaxed transition duration-300;
 }
 
-/* Responsive design */
-@media (min-width: 768px) {
+/* Responsive Design */
+@media (max-width: 768px) {
   .testimonials-section {
-    @apply px-8;
+    padding: 1rem;
+  }
+  .discover-section-grid{
+    grid-template-columns: 1fr;
   }
 }
 
-@media (min-width: 1024px) {
-  .testimonials-section {
-    @apply px-16;
-  }
-}
-.discover-section-grid{
-  background-color: white;
-  color: #233d4d;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-.discover-title{
-  padding: 1rem;
-  color: #233d4d;
-}
-.discover-button:hover {
-    background-color: #233d4d;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.testimonial-card {
-  text-align: center;
-}

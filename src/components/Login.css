@@ -1,38 +1,39 @@
 /* General Styles */
 .login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: #233d4d; /* Dark teal/blue background */
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
-  max-width: 400px;
-  width: 90%;
-  margin: 40px auto;
-  color: #dbe2ef; /* Light gray/off-white text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    margin: 40px auto;
+    color: var(--dark-blue);
 }
 
 @media (min-width: 640px) {
-  .login-form {
-    padding: 2.5rem;
-  }
+    .login-form {
+        padding: 40px;
+    }
 }
 
 /* Heading */
 .login-form .form-heading {
-  font-size: 2rem; /* Adjusted size */
-  margin-bottom: 1.875rem;
-  text-align: center;
-  font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--dark-blue);
 }
 
 /* Input */
 .login-form .form-input {
-  width: 100%;
-  padding: 0.75rem; /* Adjusted padding */
-  margin-bottom: 1.25rem;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
   border: none; /* Removed border */
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -41,28 +42,29 @@
 .login-form .form-input:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(63, 114, 175, 0.5); /* Light blue glow */
+  border: 1px solid var(--light-blue)
 }
 
 /* Button */
 .login-form .form-button {
-  background-color: #e63946; /* Red button */
-  color: #fff;
-  border: none;
-  padding: 0.9375rem 1.875rem;
-  border-radius: 0.25rem; /* Adjusted radius */
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 500;
-  width: 100%;
+    background-color: var(--light-blue);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
 }
 
 .login-form .form-button:disabled {
-  background-color: #999; /* Gray when disabled */
-  cursor: not-allowed;
+    background-color: #999;
+    cursor: not-allowed;
 }
 
 .login-form .form-button:hover {
-  background-color: #3f72af; /* Lighter teal/blue on hover */
+    background-color: var(--dark-blue);
 }
 
 .login-form .form-error-message {

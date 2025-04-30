@@ -1,37 +1,37 @@
 .contact-page {
-  @apply bg-[#233d4d] text-[#dbe2ef] p-5 rounded-md mx-auto my-5 max-w-2xl;
+  @apply bg-white text-darkBlue p-5 rounded-md mx-auto my-5 max-w-2xl shadow-lg;
 }
 
 .contact-title {
-  @apply text-center text-[#dbe2ef] mb-2 text-2xl;
+  @apply text-center text-darkBlue mb-2 text-2xl;
 }
 
 .contact-subtitle {
-  @apply text-center mb-5 text-[#dbe2ef];
+  @apply text-center mb-5 text-darkBlue;
 }
 
 .contact-form {
   @apply flex flex-col gap-2;
 }
 
-.contact-form input,
+.contact-form input, 
 .contact-form textarea {
-  @apply bg-[#3f72af] text-[#dbe2ef] border-none p-2 rounded-md focus:border-[#457b9d];
-  @apply focus:outline-none;
+  @apply bg-lightGray text-darkBlue border-none p-2 rounded-md focus:border-lightBlue;
+  @apply focus:outline-none
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  @apply outline-none;
+  @apply outline-none
 }
 
 .submit-button {
-  @apply bg-[#e63946] text-[#dbe2ef] px-4 py-2 border-none rounded-md cursor-pointer text-base;
-  @apply w-fit self-center;
+  @apply bg-lightBlue text-white px-4 py-2 border-none rounded-md cursor-pointer text-base;
+  @apply w-fit self-center
 }
 
 .thank-you {
-  @apply bg-[#3f72af] text-[#dbe2ef] mt-2 p-2 rounded-md text-center;
+  @apply bg-lightBlue text-white mt-2 p-2 rounded-md text-center;
 }
 
 /* Responsive styles */
@@ -45,4 +45,3 @@
   .contact-page {
     @apply max-w-4xl;
   }
-}

@@ -1,57 +1,20 @@
-/** @jsx createElement */
-
-import React, { useEffect, useState } from 'react'; // Import React at the beginning
-import { useParams } from 'react-router-dom';
-import { db } from '../firebase/firebase';
-import { collection, query, where, getDocs } from 'firebase/firestore';
-import VideoPlayer from './VideoPlayer';
-import './SubjectPage.css';
-import PageWrapper from './PageWrapper';
+import React, { createElement } from 'react';
+import PageWrapper from './PageWrapper'
+import './Subjects.css';
 
 function SubjectPage() {
-  const { subjectName } = useParams();
-  const [videos, setVideos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+    const subjects = [
+        { name: 'Mathematics', path: '/subjects/mathematics', description: 'Explore the world of numbers, patterns, and problem-solving.' },
+        { name: 'Science', path: '/subjects/science', description: 'Discover the wonders of the natural world through experiments and exploration.' },
+        { name: 'History', path: '/subjects/history', description: 'Travel through time and learn about the events that shaped our world.' },
+        { name: 'Geography', path: '/subjects/geography', description: 'Understand the Earth\'s landscapes, cultures, and environments.' },
+        { name: 'Literature', path: '/subjects/literature', description: 'Dive into the world of stories, poems, and plays, and discover the power of language.' },
+    ];
 
-  useEffect(() => {
-    const fetchVideos = async () => {
-      try {
-        setLoading(true);
-        const videosCollection = collection(db, 'videos');
-        const q = query(videosCollection, where('subject', '==', subjectName));
-        const querySnapshot = await getDocs(q);
-        const videosData = querySnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setVideos(videosData);
-      } catch {
-        setError('Error fetching videos. Please try again.');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchVideos();
-  }, [subjectName]);
-
-  return (
-    <PageWrapper>
-      <div className="subject-page">
-        <h2>{subjectName} Videos</h2>
-        {loading && <p>Loading videos...</p>}
-        {error && <p className="error">{error}</p>}
-        <div className="videos-grid">
-          {videos.map(video => (
-            <div key={video.id} className="video-card">
-              <VideoPlayer video={video} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </PageWrapper>
-  );
+    return (
+        <PageWrapper>
+        </PageWrapper>
+    );
 }
 
 export default SubjectPage;

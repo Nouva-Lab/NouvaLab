@@ -1,10 +1,44 @@
 #root {
-  min-height: 100vh; /* Ensure root takes up full viewport height */
+  min-height: 100vh;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  color: #ffffff;
 }
 
 .app {
-  margin-top: 60px; /* Add a top margin for the main content */
+  margin-top: 60px;
   display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 60px); /* Adjust app height to account for the margin */
+  flex-direction: column; /* Changed from row to column */
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  color: #ffffff;
+}
+
+.sidebar-open .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  transition: background-color 0.3s ease;
+}
+.button-sidebar{
+.button-sidebar{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 101;
+}
+.main-content {
+  flex-grow: 1; /* Allows the main content to take up available space */
+  margin-bottom: 40px;
 }

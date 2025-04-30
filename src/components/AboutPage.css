@@ -1,34 +1,34 @@
 .about-page {
-  @apply p-10 max-w-5xl mx-auto bg-[#233d4d] text-[#dbe2ef] font-sans;
+  @apply p-10 max-w-5xl mx-auto bg-white text-dark-blue font-sans;
 }
 
 .about-page-title {
-  @apply text-center text-4xl text-[#dbe2ef] mb-5 font-bold;
+  @apply text-center text-4xl text-dark-blue mb-5 font-bold;
   @media (min-width: 768px) {
     @apply text-5xl;
   }
 }
 
 .intro {
-  @apply text-lg mb-8 leading-relaxed text-center text-[#dbe2ef];
+  @apply text-lg mb-8 leading-relaxed text-center text-dark-blue;
   @media (min-width: 768px) {
     @apply text-xl;
   }
 }
 
 .section-title {
-  @apply text-3xl mb-5 text-[#dbe2ef] font-bold;
+  @apply text-3xl mb-5 text-dark-blue font-bold;
 }
 
 .section-text {
-  @apply text-base leading-relaxed mb-8 text-[#dbe2ef];
+  @apply text-base leading-relaxed mb-8 text-dark-blue;
   @media (min-width: 768px) {
     @apply text-lg;
   }
 }
 
 .values-section ul {
-  @apply list-disc pl-5 text-base text-[#dbe2ef];
+  @apply list-disc pl-5 text-base text-dark-blue;
 }
 
 .values-section li {

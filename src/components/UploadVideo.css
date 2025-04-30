@@ -1,80 +1,30 @@
-/* General Styles */
-.upload-video-container {
-  @apply bg-[#233d4d] text-[#dbe2ef] font-sans p-8 mx-auto rounded-lg flex flex-col items-center justify-center max-w-3xl gap-5;
-}
-
-.upload-video-title {
-  @apply text-3xl mb-3 text-left w-full;
-}
-
-.upload-video-input,
-.upload-video-select,
-.upload-video-textarea,
-.upload-video-file {
-  @apply w-full p-4 border border-[#dbe2ef] rounded-md bg-[#dbe2ef] text-[#233d4d] text-base mb-3 outline-none;
-}
-
-.upload-video-file {
-  @apply bg-[#3f72af] border-none cursor-pointer;
-}
-
-.upload-video-select {
-  @apply bg-[#dbe2ef] text-[#233d4d];
-}
-
-.upload-video-textarea {
-  @apply min-h-[100px] resize-y;
-}
-
-.upload-video-button {
-  @apply bg-[#e63946] text-[#f1faee] border-none p-4 rounded-md text-xl cursor-pointer w-full;
-  transition: background-color 0.3s;
-}
-
-.upload-video-button:hover {
-  @apply bg-[#c22a35];
-}
-
-
-/* Responsive */
-@media (max-width: 640px) {
-  .upload-video-container {
-      @apply p-6 gap-4;
-  }
-
-  .upload-video-title {
-      @apply text-2xl;
-  }
-
-  .upload-video-input,
-  .upload-video-select,
-  .upload-video-textarea,
-  .upload-video-file {
-      @apply p-3;
-  }
-
-  .upload-video-button {
-      @apply p-3 text-lg;
-  }
-}
 .upload-video-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  gap: 10px;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  margin: auto;
 }
 
-.upload-video-form {
-  width: 100%;
+.upload-video-container input,
+.upload-video-container textarea,
+.upload-video-container select {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
 }
-.upload-video-input-container,
-.upload-video-select-container,
-.upload-video-file-container,
-.upload-video-textarea-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.upload-video-container button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-/* General Styles */

@@ -1,54 +1,36 @@
-import React from 'react';
-import "./VideoGallery.css";
+import React, { useState, useEffect } from 'react';
+import VideoPlayer from './VideoPlayer';
+import './VideoGallery.css';
+import { storage } from '../firebase/firebase';
+import { ref, listAll, getDownloadURL } from 'firebase/storage';
 
-function VideoGallery() {
-  const videos = [
-    {
-      id: 1,
-      title: "Introduction to Algebra",
-      subject: "Mathematics",
-      thumbnail:
-        "https://img.youtube.com/vi/5v5N7tAs1z8/hqdefault.jpg",
-    },
-    {
-      id: 2,
-      title: "Photosynthesis Explained",
-      subject: "Science",
-      thumbnail:
-        "https://img.youtube.com/vi/eGEdqZfFfv8/hqdefault.jpg",
-    },
-    {
-      id: 3,
-      title: "World War II Overview",
-      subject: "History",
-      thumbnail:
-        "https://img.youtube.com/vi/HYAMXR3f466/hqdefault.jpg",
-    },
-    {
-      id: 4,
-      title: "Understanding Plate Tectonics",
-      subject: "Geography",
-      thumbnail:
-        "https://img.youtube.com/vi/xL2zqRZYv4k/hqdefault.jpg",
-    },
-  ];
+
+const VideoGallery = () => {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      const videosRef = ref(storage, 'videos');
+      try {
+        const res = await listAll(videosRef);
+        const urls = await Promise.all(res.items.map(item => getDownloadURL(item)));
+        setVideos(urls);
+      } catch (error) {
+        console.error('Error fetching videos:', error);
+      }
+    };
+
+    fetchVideos();
+  }, []);
 
   return (
-    <section className="video-gallery">
-      <h2>All Videos</h2>
-      <div className="video-grid">
-        {videos.map((video) => (
-          <div key={video.id} className="video-card">
-            <img src={video.thumbnail} alt={video.title} />
-            <div className="video-info">
-              <h3>{video.title}</h3>
-              <p>{video.subject}</p>
-            </div>
-          </div>
+      <div className="video-gallery">
+        <h1 className="video-title">Video Gallery</h1>
+        {videos.map((url, index) => (
+          <VideoPlayer key={index} videoUrl={url} />
         ))}
       </div>
-    </section>
   );
-}
+};
 
 export default VideoGallery;

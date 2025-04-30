@@ -1,14 +1,30 @@
 .subjects-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  @apply min-h-screen bg-lightGray text-darkBlue p-10;
 }
+.subjects-page h2 {
+  @apply text-4xl mb-8 text-center;
+}
+
 .subjects-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
   padding: 20px;
+}
+
+.subject-card {
+  @apply bg-white rounded-lg shadow-md p-6 w-full max-w-sm;
+}
+
+.subject-card h3 {
+  @apply text-2xl font-bold mb-2 text-center;
+}
+
+.subject-card p {
+  @apply text-center;
+}
+
+.subject-card:hover {
+  @apply shadow-xl transition-shadow duration-300;
 }

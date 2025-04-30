@@ -7,17 +7,14 @@ function Footer() {
     <footer className="footer">
       <div className="footer-links">
         <div className="footer-column">
-          <h4>EduVision</h4>
-          <Link to="/">Home</Link>
-          <Link to="/videos">Videos</Link>
-          <Link to="/quiz">Quizzes</Link>
+          <h4>NouvaLab</h4>          
         </div>
 
         <div className="footer-column">
           <h4>Resources</h4>
           <Link to="/about">About Us</Link>
-          <Link to="/contact">Support</Link>
-          <Link to="/profile">Your Profile</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/profile">Profile</Link>
         </div>
 
         <div className="footer-column">

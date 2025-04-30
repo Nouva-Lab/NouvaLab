@@ -1,15 +1,15 @@
 /* Profile Page */
 .profile-page {
-  @apply bg-[#233d4d] text-[#dbe2ef] flex flex-col items-center min-h-screen p-5;
+  @apply bg-light-gray text-dark-blue flex flex-col items-center min-h-screen p-5;
 }
 
 /* Profile Header */
 .profile-header {
-  @apply flex items-center gap-5 mb-8 w-full max-w-4xl bg-transparent p-2 rounded-md;
+  @apply flex items-center gap-5 mb-8 w-full max-w-4xl bg-white p-2 rounded-md shadow-md;
 }
 
 .profile-header img {
-  @apply w-20 h-20 rounded-full object-cover border-4 border-[#3f72af];
+  @apply w-20 h-20 rounded-full object-cover border-4 border-light-blue;
 }
 
 /* Profile Info */
@@ -29,7 +29,7 @@
 .saved-videos {
   @apply w-full max-w-4xl;
 }
-
+.profile-page h2{ @apply text-3xl font-bold text-dark-blue mb-4}
 .saved-videos-title {
   @apply text-2xl font-semibold mb-5;
 }
@@ -41,7 +41,7 @@
 
 /* Saved Card */
 .saved-card {
-  @apply bg-[#3f72af] rounded-xl;
+  @apply bg-white rounded-xl shadow-md;
 }
 
 /* Saved Details */
@@ -70,5 +70,5 @@
 
 .saved-details h4 {
   font-size: 1.2rem;
-  color: #dbe2ef;
+  color: #333;
 }
